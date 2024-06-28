@@ -1,0 +1,104 @@
+html
+Copiar
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu Fiscalizo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="file.png" alt="file" style="width: 100px;"></a>
+        <a href="index.html"><div class="logo">Eu Fiscalizo</div></a>
+        <nav class="navbar">
+    
+            <ul>
+                <li><a href="#accordion-sobre" onclick="toggleSidebar()">Sobre Nós</a></li>
+                <li><a href="#accordion-atividade" onclick="toggleSidebar()">Atividades Realizadas</a></li>
+                <li><a href="#accordion-equipe" onclick="toggleSidebar()">Equipe</a></li>
+                <li><a href="#accordion-galeria" onclick="toggleSidebar()">Galeria de Fotos</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">×</div>
+        <ul>
+            <li><a href="#accordion-sobre" onclick="toggleSidebar()">Sobre Nós</a></li>
+            <li><a href="#accordion-atividade" onclick="toggleSidebar()">Atividades Realizadas</a></li>
+            <li><a href="#accordion-equipe" onclick="toggleSidebar()">Equipe</a></li>
+            <li><a href="#accordion-galeria" onclick="toggleSidebar()">Gateria de Fotos</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="accordion">
+            <div class="accordion-item" id="accordion-sobre">
+                <button class="accordion-button">Sobre Nós</button>
+                <div class="accordion-content">
+                    <p>Criar um App com intuito de centralizar todas estas informações e facilitar o acesso à população, a Prefeitura e seus Órgão da Administração Direta e Indireta poderão, de forma mais rápida, organizada e eficaz, chegar ao conhecimento das demandas gerais do município e, consequentemente, gerar dados de mapeamento mais precisos e identificar áreas dos municípios onde precisam de mais atenção, visto que tais informações serão compartilhadas em tempo real entre administradores do projeto “Eu Fiscalizo” e Agentes da Administração Pública. Sendo assim, ao prestar o serviço de levantamento de demandas populacionais, a prestadora de serviço (Administradores do Sistema “Eu Fiscalizo”), ficará responsável por compilar toda a documentação necessária e dados mais importantes, direcionando-os para os administradores públicos já selecionados para análise de demandas. </p>
+                </div>
+            </div>
+            <div class="accordion-item" id="accordion-atividade">
+                <button class="accordion-button">Atividades Realizadas</button>
+                <div class="accordion-content">
+                    <p>Foi identificado inicialmente no Município de Maricá, que as demandas do referido município carecem de mais atenção e, mesmo possuindo uma organização pública, onde notoriamente prioriza as necessidades do cotidiano da população, onde foram tomadas medidas de facilitação e celeridade processual, acrescentando as leis do município, com criação de Administração Indiretas (como SOMAR e SANEMAR), através das leis complementares 306/2018, 183/2009 complementado pelo decreto 198/2018, contudo, mesmo melhorando o dia a dia e o atendimento dos cidadãos no município, ainda permanece de forma deficitária ou ainda inapropriada. Portanto, foi levantado a questão de que não existe quórum suficiente para fiscalização pública, em todas ou grande parte da área do município, onde mesmo não sendo um dos municípios que possuem maior área quadrada, possui esta dificuldade. Levando em consideração o desenvolvimento de um sistema que centraliza as informações, facilitará o seu acesso aos órgãos públicos, seja ele de administração Direta ou Indireta, trará ao cidadão uma responsabilidade cívica mais aguçada, tal qual, facilitará aos órgãos públicos no acesso a informações até mesmo de áreas de difícil acesso, de forma mais rápida e prática. Mediante implementação deste sistema, este será detalhado mais a frente, os setores administrativos poderão ser impactados de forma mais precisa, haja vista a necessidade de utilização de geolocalização e comprovação através de imagens e/ou vídeos, sendo filtrados casos de falsos chamados. Assim um colaborador integrante do sistema realizará uma visita in loco com objetivo de confirmar ou não tal informação, respaldando de tal forma a administração pública, desta forma, apenas as verdadeiras ações seriam priorizadas. No tocante a prioridades e periodicidade de chamados abertos, com a utilização de geolocalização, as regiões com maior fluxo de demanda serão identificadas e os órgão receberão estas informações para que sejam tomadas decisões mais eficazes. </p>
+                </div>
+            </div>
+            <div class="accordion-item" id="accordion-equipe">
+                <button class="accordion-button">Equipe</button>
+                <div class="accordion-content">
+                    <p>Élisson Jorge de Brito, 
+                        Sérgio Murilo, 
+                        Victor Emanuel Nunes, 
+                        Patrick de Oliveira Castro.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item" id="accordion-galeria">
+                <button class="accordion-button">Galeria de Fotos</button>
+                <div class="accordion-content">
+                    <section class="gallery">
+                        <div class="image-grid">
+                            <img src="buraco.jpeg" alt="buraco" onclick="openLightbox();currentSlide(1)">
+                            <img src="pavimentação.jpeg" alt="pavimentação" onclick="openLightbox();currentSlide(2)">
+                            <img src="file.png" alt="file" onclick="openLightbox();currentSlide(3)">
+
+                        </div>
+                    </section>
+            
+                    <div id="lightbox" class="lightbox">
+                        <span class="close" onclick="closeLightbox()">&times;</span>
+                        <div class="lightbox-content">
+                            <img class="lightbox-slide" src="buraco.jpeg" alt="buraco">
+                            <img class="lightbox-slide" src="pavimentação.jpeg" alt="pavimentação">
+                            <img class="lightbox-slide" src="file.png" alt="file">
+                            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://x.com" target="_blank">X</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact-info">
+            <p>Endereço: Rua Exemplo, 123</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Email: contato@eufiscalizo.com.br</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
